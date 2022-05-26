@@ -8,8 +8,8 @@ async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }));
   const options = new DocumentBuilder()
-    .setTitle('Croket API Documentation')
-    .setDescription('Croket API Documentation')
+    .setTitle('API Documentation')
+    .setDescription('API Documentation')
     .setVersion('0.0.1')
     .addTag('API')
     .addBearerAuth()
